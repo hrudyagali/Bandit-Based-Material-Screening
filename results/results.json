@@ -1,0 +1,158 @@
+{
+  "config": {
+    "N_ARMS": 60,
+    "BUDGET": 300,
+    "NOISE_SD": 100.0,
+    "N_SEEDS": 30,
+    "POOL_SEED": 42,
+    "EPSILON": 0.1,
+    "UCB_C": 1.0,
+    "UCB_C_SMALL": 0.1,
+    "PRIOR_MEAN": 1000.0,
+    "PRIOR_SD": 500.0,
+    "R_MAX": 2500.0,
+    "TOP_FRAC": 0.1
+  },
+  "pool_label": "REAL: matminer steel_strength (experimental yield strength, MPa)",
+  "K": 60,
+  "T": 300,
+  "n_seeds": 30,
+  "mu_star": 2487.3,
+  "n_top": 6,
+  "top_threshold": 1798.3,
+  "pool_mean": 1408.6683333333333,
+  "summary": [
+    {
+      "Algorithm": "Random",
+      "Cumulative reward (MPa)": "422,827 \u00b1 2007",
+      "Avg reward/test (MPa)": "1409.4",
+      "Cumulative regret (MPa)": "323,156 \u00b1 1824",
+      "Final simple regret (MPa)": "0.0 \u00b1 0.0",
+      "Best-material ID (%)": "100",
+      "Median tests to first top-10% hit": "7",
+      "Distinct materials tested": "59.6",
+      "Top-10% share, last 100 tests (%)": "10.3",
+      "Greedy-choice share (%)": "1.8"
+    },
+    {
+      "Algorithm": "Epsilon-Greedy",
+      "Cumulative reward (MPa)": "656,257 \u00b1 1562",
+      "Avg reward/test (MPa)": "2187.5",
+      "Cumulative regret (MPa)": "89,898 \u00b1 1401",
+      "Final simple regret (MPa)": "0.0 \u00b1 0.0",
+      "Best-material ID (%)": "100",
+      "Median tests to first top-10% hit": "8",
+      "Distinct materials tested": "60.0",
+      "Top-10% share, last 100 tests (%)": "91.4",
+      "Greedy-choice share (%)": "72.6"
+    },
+    {
+      "Algorithm": "UCB1",
+      "Cumulative reward (MPa)": "434,094 \u00b1 652",
+      "Avg reward/test (MPa)": "1447.0",
+      "Cumulative regret (MPa)": "312,026 \u00b1 227",
+      "Final simple regret (MPa)": "0.0 \u00b1 0.0",
+      "Best-material ID (%)": "100",
+      "Median tests to first top-10% hit": "22",
+      "Distinct materials tested": "60.0",
+      "Top-10% share, last 100 tests (%)": "13.7",
+      "Greedy-choice share (%)": "2.6"
+    },
+    {
+      "Algorithm": "Thompson Sampling",
+      "Cumulative reward (MPa)": "685,205 \u00b1 13991",
+      "Avg reward/test (MPa)": "2284.0",
+      "Cumulative regret (MPa)": "60,954 \u00b1 13795",
+      "Final simple regret (MPa)": "22.0 \u00b1 30.0",
+      "Best-material ID (%)": "93",
+      "Median tests to first top-10% hit": "6",
+      "Distinct materials tested": "39.5",
+      "Top-10% share, last 100 tests (%)": "96.8",
+      "Greedy-choice share (%)": "86.6"
+    },
+    {
+      "Algorithm": "UCB1 (c=0.1)",
+      "Cumulative reward (MPa)": "673,483 \u00b1 860",
+      "Avg reward/test (MPa)": "2244.9",
+      "Cumulative regret (MPa)": "72,594 \u00b1 504",
+      "Final simple regret (MPa)": "0.0 \u00b1 0.0",
+      "Best-material ID (%)": "100",
+      "Median tests to first top-10% hit": "22",
+      "Distinct materials tested": "60.0",
+      "Top-10% share, last 100 tests (%)": "98.3",
+      "Greedy-choice share (%)": "75.7"
+    }
+  ],
+  "paired": {
+    "Epsilon-Greedy": [
+      233429.6280671182,
+      2358.642884965139
+    ],
+    "UCB1": [
+      11266.870710350235,
+      1914.3006074530954
+    ],
+    "Thompson Sampling": [
+      262377.7411606735,
+      15063.344909484375
+    ],
+    "UCB1 (c=0.1)": [
+      250656.0781730899,
+      2159.747657830873
+    ]
+  },
+  "raw": {
+    "Random": {
+      "cum_reward": 422827.23332403635,
+      "cum_regret": 323155.9366666664,
+      "simple_regret": 0.0,
+      "best_id": 1.0,
+      "unique": 59.56666666666667,
+      "discovery_median": 7.0
+    },
+    "Epsilon-Greedy": {
+      "cum_reward": 656256.8613911547,
+      "cum_regret": 89898.28333333334,
+      "simple_regret": 0.0,
+      "best_id": 1.0,
+      "unique": 60.0,
+      "discovery_median": 8.5
+    },
+    "UCB1": {
+      "cum_reward": 434094.1040343866,
+      "cum_regret": 312025.933333333,
+      "simple_regret": 0.0,
+      "best_id": 1.0,
+      "unique": 60.0,
+      "discovery_median": 22.0
+    },
+    "Thompson Sampling": {
+      "cum_reward": 685204.9744847099,
+      "cum_regret": 60954.36000000001,
+      "simple_regret": 22.0,
+      "best_id": 0.9333333333333333,
+      "unique": 39.46666666666667,
+      "discovery_median": 5.5
+    },
+    "UCB1 (c=0.1)": {
+      "cum_reward": 673483.3114971262,
+      "cum_regret": 72593.85333333336,
+      "simple_regret": 0.0,
+      "best_id": 1.0,
+      "unique": 60.0,
+      "discovery_median": 22.0
+    }
+  },
+  "observations": [
+    "Data source: REAL: matminer steel_strength (experimental yield strength, MPa)",
+    "Pool: 60 materials, budget 300 tests, noise SD 100 MPa, 30 seeds.",
+    "Ranking of the four required algorithms by mean cumulative reward: Thompson Sampling > Epsilon-Greedy > UCB1 > Random.",
+    "Oracle (always testing the best material) would earn about 746,190 MPa in total; Random earns 422,827.",
+    "Random: cumulative regret 323,156, final simple regret 0.0 MPa, best-material ID 100%, distinct materials tested 59.6.",
+    "Epsilon-Greedy: cumulative regret 89,898, final simple regret 0.0 MPa, best-material ID 100%, distinct materials tested 60.0.",
+    "UCB1: cumulative regret 312,026, final simple regret 0.0 MPa, best-material ID 100%, distinct materials tested 60.0.",
+    "Thompson Sampling: cumulative regret 60,954, final simple regret 22.0 MPa, best-material ID 93%, distinct materials tested 39.5.",
+    "UCB1 (c=0.1): cumulative regret 72,594, final simple regret 0.0 MPa, best-material ID 100%, distinct materials tested 60.0.",
+    "Median tests until a top-10% material is first tested: Random 7, Epsilon-Greedy 8, UCB1 22, Thompson Sampling 6, UCB1 (c=0.1) 22."
+  ]
+}
